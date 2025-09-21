@@ -12,7 +12,8 @@
     "test:contacts": "node test_contacts_endpoint.js",
     "examples": "node examples.js",
     "clean": "rm -rf dist contacts.db",
-    "reset-db": "rm -f contacts.db && echo 'Database reset. Restart server to recreate.'"
+    "reset-db": "rm -f contacts.db && echo 'Database reset. Restart server to recreate.'",
+    "vercel-build": "npm run build"
   },
   "keywords": [
     "contact",
