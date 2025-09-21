@@ -1,11 +1,24 @@
 import sqlite3 from 'sqlite3';
 import { Contact, CreateContactData } from '../models/Contact';
+import path from 'path';
+import fs from 'fs';
 
 export class Database {
   private db: sqlite3.Database;
 
   constructor(dbPath: string = './contacts.db') {
-    this.db = new sqlite3.Database(dbPath);
+    // Vercel specific path adjustment
+    const finalDbPath = process.env.VERCEL
+      ? path.join('/tmp', 'contacts.db')
+      : dbPath;
+
+    // Ensure the directory exists (for local development)
+    const dir = path.dirname(finalDbPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    this.db = new sqlite3.Database(finalDbPath);
     this.initializeDatabase();
   }
 
