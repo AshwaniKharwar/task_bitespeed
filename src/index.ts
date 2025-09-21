@@ -30,7 +30,7 @@ app.post('/api/v1/identify', (req, res) => contactController.identify(req, res))
 app.get('/api/v1/contacts', (req, res) => contactController.getAllContacts(req, res));
 
 // Health check endpoint
-app.get('/api/v1/healthf', (req, res) => {
+app.get('/api/v1/health', (req, res) => {
   res.status(200).json({ 
     status: 'OK', 
     message: 'Bitespeed Identity Reconciliation Service is running',
