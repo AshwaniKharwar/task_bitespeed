@@ -2,6 +2,10 @@
 
 A sophisticated web service that helps identify and link customer contacts across multiple purchases, even when they use different email addresses and phone numbers. Built for FluxKart.com to help Doc Brown's time machine parts shopping experience! 🚗⚡
 
+## 🌐 Live Demo
+
+The service is deployed and can be accessed at: [https://task-bitespeed.vercel.app/](https://task-bitespeed.vercel.app/)
+
 ## 🎯 Problem Statement
 
 Dr. Emmett Brown uses different email addresses and phone numbers for each purchase to avoid drawing attention to his time machine project. FluxKart.com needs to identify that all these different contact details belong to the same customer for a personalized experience.
